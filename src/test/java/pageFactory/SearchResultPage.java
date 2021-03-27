@@ -1,5 +1,6 @@
 package pageFactory;
 
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -11,6 +12,14 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SearchResultPage extends BasePage{
+
+//    public SearchResultPage(){
+//        PageFactory.initElements(Driver.get(), this);
+//    }
+
+    public SearchResultPage(){
+        PageFactory.initElements(new AppiumFieldDecorator(Driver.get()),this);
+    }
 
 // **** Start of Upper Result Info Bar element
     @FindBy(xpath = "//body[1]/div[1]/div[2]/span[1]/div[1]/span[1]/h1[1]/div[1]/div[1]/div[1]/div[1]/span[1]")

@@ -1,5 +1,6 @@
 package pageFactory;
 
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,6 +9,14 @@ import utilities.Driver;
 import java.util.List;
 
 public class NavBar extends BasePage{
+
+//    public NavBar(){
+//        PageFactory.initElements(Driver.get(), this);
+//    }
+
+    public NavBar(){
+        PageFactory.initElements(new AppiumFieldDecorator(Driver.get()),this);
+    }
 
     @FindBy(id = "twotabsearchtextbox")
     public WebElement tabSearchTextBox;
