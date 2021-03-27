@@ -1,0 +1,123 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4561000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user on the Amazon homepage",
+            "match": {
+              "location": "step.SearchResultSteps.user_on_the_Amazon_homepage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-27T18:39:19.429Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1606000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step.Hook.setUp()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "Search by product name anf filter by price range",
+        "description": "",
+        "id": "search-box-and-filter-option-tests;search-by-product-name-anf-filter-by-price-range;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 3123000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step.Hook.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1484000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user search by \"Apple MacBook Pro (16-Inch, 16GB RAM, 512GB Storage) - Space Gray\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Apple MacBook Pro (16-Inch, 16GB RAM, 512GB Storage) - Space Gray\"",
+                  "offset": 15
+                }
+              ],
+              "location": "step.SearchResultSteps.user_search_by(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1299000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "filter by 2000 and 3000 values",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2000",
+                  "offset": 10
+                },
+                {
+                  "val": "3000",
+                  "offset": 19
+                }
+              ],
+              "location": "step.SearchResultSteps.filter_by_and_values(int,int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "price of products listed should be between the filter range",
+            "match": {
+              "location": "step.SearchResultSteps.price_of_products_listed_should_be_between_the_filter_range()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@NewCase"
+          }
+        ]
+      }
+    ],
+    "name": "Search box and filter option tests",
+    "description": "",
+    "id": "search-box-and-filter-option-tests",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Search.feature",
+    "tags": []
+  }
+]
